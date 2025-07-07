@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Survivors - Epic Fantasy Action Game | Play Online Free</title>
+    <meta name="description" content="Play Monster Survivors, an epic fantasy action game where you battle hordes of monsters and survive endless waves. Free online game with stunning graphics and addictive gameplay.">
+    <meta name="keywords" content="Monster Survivors, online game, fantasy game, action game, survival game, monster battle, free games">
+    <meta name="author" content="Monster Fantasy Realm">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://monsterfantasyrealm.online">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Monster Survivors - Epic Fantasy Action Game">
+    <meta property="og:description" content="Battle hordes of monsters in this epic survival game. Play free online now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monsterfantasyrealm.online">
+    <meta property="og:site_name" content="Monster Fantasy Realm">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Monster Survivors - Epic Fantasy Action Game">
+    <meta name="twitter:description" content="Battle hordes of monsters in this epic survival game. Play free online now!">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Monster Survivors",
+      "description": "Epic fantasy action game where you battle hordes of monsters and survive endless waves",
+      "url": "https://monsterfantasyrealm.online",
+      "genre": ["Action", "Fantasy", "Survival"],
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007AFF;
+            text-decoration: none;
+            background: linear-gradient(45deg, #007AFF, #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #007AFF;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 0;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .play-button {
+            background: linear-gradient(45deg, #FF3B30, #FF9500);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3);
+        }
+        
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 59, 48, 0.4);
+        }
+        
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin: -2rem auto 4rem;
+            padding: 2rem;
+            max-width: 1000px;
+            position: relative;
+        }
+        
+        .game-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1d1d1f;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #007AFF, #5856D6);
+            border-radius: 2px;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #424245;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1d1d1f;
+        }
+        
+        .feature-card p {
+            color: #6c757d;
+            font-size: 1rem;
+        }
+        
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007AFF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: #8e8e93;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #007AFF;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .content-section {
+                padding: 2rem 1rem;
+            }
+            
+            .game-container {
+                margin: -1rem 20px 2rem;
+                padding: 1rem;
+            }
+            
+            .game-iframe {
+                height: 400px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .game-container {
+                margin: -1rem 15px 2rem;
+            }
+            
+            .game-iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Monster Fantasy Realm</a>
+            <ul class="nav-links">
+                <li><a href="#game">Play Game</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Monster Survivors</h1>
+                <p class="hero-subtitle">Battle endless hordes of monsters in this epic fantasy survival adventure</p>
+                <button class="play-button" onclick="scrollToGame()">Play Now</button>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="game" class="game-container">
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="loading-spinner"></div>
+                </div>
+                <iframe 
+                    id="gameIframe"
+                    class="game-iframe" 
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+                    title="Monster Survivors Game"
+                    allowfullscreen
+                    onload="hideLoading()">
+                </iframe>
+            </section>
+
+            <section id="about" class="content-section">
+                <h2>About Monster Survivors</h2>
+                <p>Monster Survivors is an intense fantasy action game that challenges players to survive against endless waves of mythical creatures and monsters. Set in a dark fantasy realm, you'll need quick reflexes, strategic thinking, and powerful upgrades to overcome increasingly difficult challenges.</p>
+                <p>This browser-based game combines classic survival mechanics with modern gameplay elements, offering an engaging experience that keeps players coming back for more. Whether you're a casual gamer or a hardcore enthusiast, Monster Survivors delivers thrilling combat and progression systems that will test your skills to the limit.</p>
+            </section>
+
+            <section id="features" class="content-section">
+                <h2>Game Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">⚔️</span>
+                        <h3>Epic Combat System</h3>
+                        <p>Experience fluid combat mechanics with a variety of weapons and abilities to defeat hordes of monsters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h3>Progressive Difficulty</h3>
+                        <p>Face increasingly challenging waves of enemies that test your survival skills and strategic thinking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🏆</span>
+                        <h3>Character Progression</h3>
+                        <p>Upgrade your character with powerful abilities and equipment as you progress through the game.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🌟</span>
+                        <h3>Stunning Graphics</h3>
+                        <p>Immerse yourself in beautifully crafted fantasy environments with detailed monster designs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gameplay" class="content-section">
+                <h2>Gameplay Overview</h2>
+                <p>In Monster Survivors, you take control of a brave warrior thrust into a world overrun by monsters. Your primary objective is survival – lasting as long as possible against increasingly powerful waves of enemies. The game features intuitive controls that are easy to learn but difficult to master.</p>
+                <p>As you progress, you'll collect experience points and resources that can be used to upgrade your character's abilities, unlock new weapons, and enhance your survival capabilities. The game's roguelike elements ensure that each playthrough offers a unique experience with different challenges and opportunities.</p>
+                <p>Strategic positioning, timing, and resource management are crucial for success. Players must balance offensive capabilities with defensive strategies, making split-second decisions that can mean the difference between victory and defeat. The game rewards both quick reflexes and tactical thinking.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>How to Play</h2>
+                <p>Getting started with Monster Survivors is simple – just click the "Play Now" button above to launch the game directly in your browser. No downloads or installations required! The game supports both desktop and mobile devices, ensuring you can enjoy the monster-battling action wherever you are.</p>
+                <p>Use your mouse or touch controls to move your character and aim your attacks. The game features an auto-attack system, so you can focus on positioning and survival strategy. Collect power-ups and upgrades that appear throughout the battlefield to enhance your abilities and increase your chances of survival.</p>
+                <p>Challenge yourself to beat your high score and see how long you can survive against the endless monster hordes. Share your achievements with friends and compete to become the ultimate Monster Survivor!</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Monster Fantasy Realm. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        function scrollToGame() {
+            document.getElementById('game').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Hide loading overlay when iframe loads
+        function hideLoading() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 300);
+            }
+        }
+
+        // Add smooth scrolling to all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply fade-in animation to content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Performance optimization: lazy load iframe
+        const gameIframe = document.getElementById('gameIframe');
+        const gameContainer = document.getElementById('game');
+        
+        const gameObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Iframe is already loaded, just ensure it's visible
+                    gameObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        gameObserver.observe(gameContainer);
+
+        // Add error handling for iframe loading
+        gameIframe.addEventListener('error', function() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.innerHTML = '<p style="color: #666;">Game loading failed. Please refresh the page.</p>';
+        });
+
+        // Responsive menu toggle for mobile (if needed)
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '☰';
+        menuToggle.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #1d1d1f;
+            cursor: pointer;
+            @media (max-width: 768px) {
+                display: block;
+            }
+        `;
+
+        // Add to navigation
+        const nav = document.querySelector('nav');
+        nav.appendChild(menuToggle);
+
+        // SEO and performance optimizations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preload critical resources
+            const preloadLink = document.createElement('link');
+            preloadLink.rel = 'preload';
+            preloadLink.href = 'https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html';
+            preloadLink.as = 'document';
+            document.head.appendChild(preloadLink);
+
+            // Add structured data for better SEO
+            const breadcrumbData = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://monsterfantasyrealm.online"
+                }]
+            };
+
+            const breadcrumbScript = document.createElement('script');
+            breadcrumbScript.type = 'application/ld+json';
+            breadcrumbScript.textContent = JSON.stringify(breadcrumbData);
+            document.head.appendChild(breadcrumbScript);
+        });
+    </script>
+</body>
+</html>
